@@ -3,11 +3,11 @@
 ## 1. H5 唤起本地app
 通过url scheme 唤起本地app
 常用的 URL scheme  
-https://github.com/dzlixu/Inbox.git doc/1.md
+https://github.com/dzlixu/Inbox.git/doc/1.md
 demo:
-https://github.com/dzlixu/Inbox.git src/1.html
+https://github.com/dzlixu/Inbox.git/src/1.html
 
-## 你写的 height:100% 不起作用
+## 2你写的 height:100% 不起作用
 Web浏览器在计算有效宽度时会考虑浏览器窗口的打开宽度。我们不设置宽，会自动填满整个横向宽度.
 但是高度的计算方式完全不一样。事实上，浏览器根本就不计算内容的高度，除非内容超出了视窗范围(导致滚动条出现)。或者你给整个页面设置一个绝对高度。否则，浏览器就会简单的让内容往下堆砌，页面的高度根本就无需考虑。
 
@@ -15,6 +15,10 @@ Web浏览器在计算有效宽度时会考虑浏览器窗口的打开宽度。�
 
 即父元素的高度只是一个缺省值：height: auto;我们设置height：100%时，是要求浏览器根据这样一个缺省值来计算百分比高度时，只能得到undefined的结果。也就是一个null值，浏览器不会对这个值有任何的反应。
 
+解决：只要给父元素设置高度就行了。
+
+line-hieght 居中
+代码如设置了line-height为100%没有居中，这是因为line-hieght的%是相对于字体尺寸的，所以直接作用于没有绝对高度的元素是不行的。
 demo:
-https://github.com/dzlixu/Inbox.git src/2.html
+https://github.com/dzlixu/Inbox.git/src/2.html
 
