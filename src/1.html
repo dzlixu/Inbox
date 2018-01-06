@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>H5换唤起app</h1>
+  <a href="weixin://">打开微信</a>
+  <button id="btn">打开</button>
+  <div id="show">start</div>
+</body>
+<script>
+  var btn = document.getElementById("btn");
+  var show = document.getElementById("show");
+  var last;
+  btn.onclick = function() {
+    alert("click");
+    const iframe = document.createElement('iframe');
+    iframe.src = 'weixin://'; // URL scheme的方式跳转
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+  }
+  var timer = 1000;
+  setTimeout(function() {
+    // 执行成功后移除iframe
+    document.body.removeChild(iframe);
+
+    //setTimeout小于2000通常认为是唤起APP失败 
+    if (Date.now() - last < 2000) {
+      alert()
+      show.innerHTML = "唤起APP失败！"
+        // 执行失败函数
+        // 这里需要考虑一下之前知乎遇到的那个问题（浏览器询问导致时间小于2S）
+
+    } else {
+      show.innerHTML = "唤起APP失败！"
+        //  执行成功函数
+
+    }
+  }, timer);
+</script>
+
+</html>
