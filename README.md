@@ -1,12 +1,12 @@
 # About
 这个仓库是网上看到的一些前端的小技巧的实践集合
 ## 1. H5 唤起本地app
-通过url scheme 唤起本地app
-常用的 URL scheme  
-https://github.com/dzlixu/Inbox/doc/1.md
+通过url scheme 唤起本地app.
+常用的 URL scheme:
+https://github.com/dzlixu/Inbox/blob/master/doc/1.md
 
 demo:
-https://github.com/dzlixu/Inbox/src/1.html
+https://github.com/dzlixu/Inbox/blob/master/src/1.html 
 
 ## 2.你写的 height:100% 不起作用
 Web浏览器在计算有效宽度时会考虑浏览器窗口的打开宽度。我们不设置宽，会自动填满整个横向宽度.
@@ -21,5 +21,6 @@ Web浏览器在计算有效宽度时会考虑浏览器窗口的打开宽度。�
 line-hieght 居中
 代码如设置了line-height为100%没有居中，这是因为line-hieght的%是相对于字体尺寸的，所以直接作用于没有绝对高度的元素是不行的。
 demo:
-https://github.com/dzlixu/Inbox/src/2.html
+https://github.com/dzlixu/Inbox/blob/master/src/2.html
+
 
